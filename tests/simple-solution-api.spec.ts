@@ -63,7 +63,7 @@ test('post order with Incorrect data should receive code 201', async ({ request 
   const response = await request.post(baseURL , {
     data: requestBody,
   })
-  // Log the response status and body
+  // Log the response status and body... Changes
   console.log('response status:', response.status())
   //console.log('response body:', await response.text())
   expect(response.status()).toBe(StatusCodes.BAD_REQUEST)
