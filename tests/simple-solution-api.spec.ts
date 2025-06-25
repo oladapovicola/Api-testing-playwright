@@ -8,7 +8,7 @@ const baseURL = 'https://backend.tallinn-learning.ee/test-orders'
 test('get order with correct id should receive code 200', async ({ request }) => {
   // Build and send a GET request to the server
   const apiResponse = await request.get(baseURL + '/1')
-  // log the apiResponse status, body and headers
+  // Log the apiResponse status, body and headers
   console.log('apiResponse body:', await apiResponse.json())
   console.log('apiResponse headers:', apiResponse.headers())
   // Check if the apiResponse status is 200
