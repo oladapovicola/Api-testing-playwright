@@ -84,7 +84,7 @@ test('PUT order with correct data and API key should receive 200', async ({ requ
     id: 0,
   }
 
-  const response = await request.put(baseURL+'/10', {
+  const response = await request.put(baseURL + '/10', {
     data: requestBody,
     headers: requestHeaders,
   })
@@ -112,7 +112,7 @@ test('PUT order with incorrect data and API key should receive 400', async ({ re
     id: 0,
   }
 
-  const response = await request.put(baseURL+'/18', {
+  const response = await request.put(baseURL + '/18', {
     data: requestBody,
     headers: requestHeaders,
   })
@@ -132,7 +132,7 @@ test('Delect order with correct data and API key should receive 204', async ({ r
   }
   // Prepare JSON request body
 
-  const response = await request.delete(baseURL+'/10', {
+  const response = await request.delete(baseURL + '/10', {
     headers: requestHeaders,
   })
 
@@ -150,7 +150,7 @@ test('Delect order with Incorrect data and API key should receive 400', async ({
   }
   // Prepare JSON request body
 
-  const response = await request.delete(baseURL+'/120', {
+  const response = await request.delete(baseURL + '/120', {
     headers: requestHeaders,
   })
 
