@@ -4,7 +4,6 @@ import { StatusCodes } from 'http-status-codes'
 
 const baseURL = 'https://backend.tallinn-learning.ee/test-orders'
 
-
 // GET REQUEST
 test('get order with correct id should receive code 200', async ({ request }) => {
   // Build and send a GET request to the server
@@ -26,7 +25,6 @@ test('request with incorrect id should receive code 400', async ({ request }) =>
   expect(apiResponse.status()).toBe(400)
 })
 
-
 // POST REQUEST
 
 test('post order with correct data should receive code 201', async ({ request }) => {
@@ -40,7 +38,7 @@ test('post order with correct data should receive code 201', async ({ request })
     id: 0,
   }
   // Send a POST request to the server
-  const response = await request.post(baseURL , {
+  const response = await request.post(baseURL, {
     data: requestBody,
   })
   // Log the response status and body
@@ -60,7 +58,7 @@ test('post order with Incorrect data should receive code 201', async ({ request 
     id: 0,
   }
   // Send a POST request to the server
-  const response = await request.post(baseURL , {
+  const response = await request.post(baseURL, {
     data: requestBody,
   })
   // Log the response status and body... Changes
