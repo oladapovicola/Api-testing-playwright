@@ -10,6 +10,7 @@ test('Login to a student with incorrect credentials', async ({ request }) => {
   const apiResponse = await request.post(authURL, {
     data: loginData,
   })
+
   expect.soft(apiResponse.status()).toBe(StatusCodes.UNAUTHORIZED)
 })
 
